@@ -1,32 +1,32 @@
 import sale from './hero/sale.png';
 import shopping from './hero/shopping.png';
-import women from './hero/women.png';
-import shirt1 from './shirt/shirt.png';
-import shirt2 from './shirt/shirt2.png';
-import shirt3 from './shirt/shirt3.png';
+import helmet from './hero/helmet.png';
+import saw_t from './saw/saw_t.png';
+import saw_t2 from './saw/saw_t2.png';
+import saw_t3 from './saw/saw_t3.png';
 import darkModeButton from './website/dark-mode-button.png';
 import footerPattern from './website/footer-pattern.jpg';
 import lightModeButton from './website/light-mode-button.png';
 import orangePattern from './website/orange-pattern.jpg';
-import women2 from './women/women2.jpg';
-import women3 from './women/women3.jpg';
-import women4 from './women/women4.jpg';
+import tool from './tools/tool.png';
+import tool2 from './tools/tool2.png';
+import tool3 from './tools/tool3.png';
 import logo from './logo.png';
 
 export const assets = {
   sale,
   shopping,
-  women,
-  shirt1,
-  shirt2,
-  shirt3,
+  helmet,
+  saw_t,
+  saw_t2,
+  saw_t3,
   darkModeButton,
   footerPattern,
   lightModeButton,
   orangePattern,
-  women2,
-  women3,
-  women4,
+  tool,
+  tool2,
+  tool3,
   logo,
 };
 

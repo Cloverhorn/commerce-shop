@@ -8,13 +8,13 @@ const imageList = [
     {
         id: 1,
         img: assets.shopping,
-        title: "Up to 50% off on all Men's Wear",
+        title: "Buy 2 get 1 ",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt maxime repellendus necessitatibus quasi perferendis, beatae vitae exercitationem in. Sequi?",
     },
     {
         id: 2,
-        img: assets.women,
-        title: "30% off on all women's Wear",
+        img: assets.helmet,
+        title: "30% off on all construction helmets",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt maxime repellendus necessitatibus quasi perferendis, beatae vitae exercitationem in. Sequi?",
     },
     {
@@ -25,7 +25,7 @@ const imageList = [
     },
 ]
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
 
     var settings = {
         dots: true,
@@ -40,27 +40,28 @@ const Hero = () => {
     return (
         <div className='relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 '>
             {/* background pattern */}
-            <div className=' h-[700px] w-[700px] bg-primary/40 absolute top-[-50%] right-5 rounded-3xl rotate-45'></div>
+            <div className=' h-[700px] w-[700px] bg-primary/80 absolute top-[60%] left-[-100px] rounded-3xl rotate-12'></div>
             {/* Hero section */}
 
             <div className="container pb-8 sm:pb-0">
                 <Slider {...settings}>
                     {/* #1 */}
                     {imageList.map((item) => (
-                        <div>
+                        <div key={item.id}>
                             <div className='grid grid-cols-1 sm:grid-cols-2'>
                                 {/* text content section */}
                                 <div className='flex flex-col justify-center gap-4 pt-12 px-1 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10'>
                                     <h1 className='text-3xl sm:text-6xl lg:text-7xl font-bold'>{item.title}</h1>
                                     <p className='text-sm'>{item.description}</p>
                                     <div className=''>
-                                        <button className='bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full'>Order now</button>
+                                        <button onClick={() => handleOrderPopup()}
+                                        className='bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full'>Order now</button>
                                     </div>
                                 </div>
                                 {/* image section */}
                                 <div className='order-1 sm:order-2'>
                                     <div className='relative z-10'>
-                                        <img src={item.img} alt="" className='w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto' />
+                                        <img src={item.img} alt="" className='w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-100 lg:scale-120 object-contain mx-auto' />
                                     </div>
                                 </div>
 
@@ -71,7 +72,6 @@ const Hero = () => {
 
 
             </div>
-            {/* TESTETSTETS */}
         </div>
     )
 }
